@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+  position: sticky;
+  top: 0;
+  padding: 0.6vw;
+  background: black;
+  text-align: center;
+  z-index: 10;
+}
+
+      header .header-buttons {
+        position: absolute;
+        right: 10px; 
+        top: 50%; 
+        transform: translateY(-50%);
+      }
+
+  
+      header button {
+        padding: 5px 10px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 2vw;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 1px;
+      }
+
+      /* Home Button */
+      header .home-button {
+        position: absolute;
+        left: 0vw; 
+        top: 50%; 
+        transform: translateY(-50%);
+        font-size: 2.5vw;
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px 20px;
+      }
+
+
+      .content > div {
+        height: 50px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 20px;
+      }
+
+      .imgbox {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        border: none;
+      }
+
+      .imgboxnobutton {
+        position: relative;
+        text-align: center;
+      }
+
+      .center-fit {
+        width: 53%;
+        object-fit: cover;
+        transform: translateX(-45%)translateY(10%);
+        transition: filter 0.5s ease;
+      }
+      
+  .center-fitgrid {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.5s ease;
+      }
+      
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        color: white;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .left-fit {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        font-size: 3vw;
+        margin-top: 5vw;
+      }
+
+
+
+   
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+        text-align: center;
+      }
+
+   .titleoffright {
+  position: relative;  /* relative works fine now */
+  top: 0;
+  left: 0;
+  transform: none;
+  font-size: 5vw;
+  width: 40%;
+  text-align: left;
+  margin: 50px 0 20px 50px; /* adjust spacing as you like */
+}
+
+.upperbodytext {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  font-size: 2vw;
+  width: 50%;
+  text-align: left;
+  margin: 0 0 50px 50px; /* adjust as needed */
+}
+
+
+      .headingleft {
+        position: absolute;
+        top: 90%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-size: 6vw;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <button class="home-button" onclick="window.location.href='../firstpage/index.html';">Home</button>
+        <p style="color:white; font-size: 3.5vw;"> Anjiang Zhang </p>
+        <div class="header-buttons">
+          <button onclick="window.location.href='../aboutpage/index.html';">About</button>
+          <button onclick="window.location.href='../contactpage/index.html';">Contact</button>
+        </div>
+      </header>
+
+      <div class="imgboxnobutton">
+        <div class="titleoffright">
+          <p style="font-family:verdana">Contacts</p>
+        </div>
+        
+        
+        <div class="upperbodytext">
+          <p style="font-family:verdana">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+        </div>
+        
+      </div> <!-- top image + title -->
+
+        
+<div class="black-footer">
+    <p class="footer-text">
+    © 2025 Your Name | 
+    <a href="#" style="color:white; text-decoration: underline;">Privacy Policy</a>
+  </p>
+       <a style="color:white;"><p class="footer-text">123 Main Street, City, Country</p>
+    <p class="footer-text">Email: example@email.com | Phone: +1 (123) 456-7890</p> </a>
+</div> 
+      
+      
+     
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

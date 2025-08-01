@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  
+}
+canvas {
+  display: block;
+  
+}
+
+.black-footer {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  position: relative; 
+  bottom: 0;
+}
+
+.footer-text {
+  color: white;
+  font-size: 1.5vw;        /* Responsive text size */
+  font-family: Verdana, sans-serif;
+}
+
+.imgboxnobutton {
+  text-align: left;
+}
