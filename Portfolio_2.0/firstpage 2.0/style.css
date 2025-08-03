@@ -25,8 +25,8 @@ canvas {
 
 .carousel {
     position: relative;
-    width: 1000px; /* smaller width */
-    height: 650px; /* smaller height */
+    width: 1200px; /* smaller width */
+    height: 750px; /* smaller height */
     margin: 40px auto; /* center on page */
     overflow: visible;
     display: flex;
@@ -46,8 +46,8 @@ canvas {
   }
 
   .carousel-track img {
-    width: 1000px; /*  carousel width */
-    height: 650px; /*  carousel height */
+    width: 1200px; /*  carousel width */
+    height: 750px; /*  carousel height */
     object-fit: cover; /* fill frame */
     flex-shrink: 0;
   }
@@ -72,3 +72,35 @@ canvas {
   .carousel-button.next {
     right: -70px;
   }
+
+  .rectangle-box {
+  width: 1200px;
+  height:450px;
+  margin: 30px auto;
+  background-color: #5a7ed8;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+.rectangle-content {
+  display: flex;
+  align-items: center;  /* vertically center text + image */
+  justify-content: space-between;  /* space out text and image */
+}
+
+.rectangle-content p {
+  margin: 0;
+  text-align: left;   /* text alignment within its side */
+  flex: 1;            /* take available space */
+}
+
+.rectangle-content img {
+  width: 50px;        /* control image size */
+  height: 50px;       /* control image size */
+  border-radius: 8px; /* optional: rounded image corners */
+  object-fit: cover;  /* keeps image nicely cropped */
+  margin-left: 15px;  /* space between text and image */
+}
