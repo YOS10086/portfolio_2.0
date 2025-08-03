@@ -98,8 +98,8 @@ canvas {
 }
 
 .rectangle-content img {
-  width: 50px;        /* control image size */
-  height: 50px;       /* control image size */
+  width: 300px;        /* control image size */
+  height: 450px;       /* control image size */
   border-radius: 8px; /* optional: rounded image corners */
   object-fit: cover;  /* keeps image nicely cropped */
   margin-left: 15px;  /* space between text and image */
