@@ -14,19 +14,31 @@ canvas {
   background-color: black;
   position: relative; 
   bottom: 0;
+   margin-top: 13vw;
+
+  display: flex;               /* Center contents */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;          /* Center text inside */
+  padding: 20px;
+
 }
 
 .footer-text {
   color: white;
   font-size: 1.5vw;        
   font-family: Verdana, sans-serif;
+    line-height: 1.6;
+  letter-spacing: 0.5px;       /* Slight spacing between letters */
+  max-width: 900px;            /* Keep text from stretching too wide */
 }
 
 
 .carousel {
     position: relative;
-    width: 1200px; /* smaller width */
-    height: 750px; /* smaller height */
+    width: 1000px; /* smaller width */
+    height: 650px; /* smaller height */
     margin: 40px auto; /* center on page */
     overflow: visible;
     display: flex;
@@ -46,8 +58,8 @@ canvas {
   }
 
   .carousel-track img {
-    width: 1200px; /*  carousel width */
-    height: 750px; /*  carousel height */
+    width: 1000px; /*  carousel width */
+    height: 650px; /*  carousel height */
     object-fit: cover; /* fill frame */
     flex-shrink: 0;
   }
@@ -74,33 +86,84 @@ canvas {
   }
 
   .rectangle-box {
-  width: 1200px;
-  height:450px;
+  width: 1300px;
+  height: 400px;
   margin: 30px auto;
-  background-color: #5a7ed8;
+  background-image: linear-gradient(120deg, #329ba9, #4cddf7);
   border-radius: 15px;
   padding: 20px;
   color: white;
   font-family: sans-serif;
+  overflow: hidden;
+}
+
+  .rectangle-box2 {
+  width: 1300px;
+  height: 400px;
+  margin: 30px auto;
+  background-image: linear-gradient(130deg, #ca9811, #fecc41) ;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+
+  .rectangle-box3 {
+  width: 1300px;
+  height: 400px;
+  margin: 30px auto;
+  background-image: linear-gradient(100deg,#689122,#b6f547) ;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
 }
 
 
 .rectangle-content {
   display: flex;
-  align-items: center;  /* vertically center text + image */
+  align-items: flex-start;  /* vertically center text + image */
   justify-content: space-between;  /* space out text and image */
 }
+.rectangle-text {
+  flex: 1; /* take up remaining space */
+  margin-right: 20px;
+}
 
-.rectangle-content p {
-  margin: 0;
-  text-align: left;   /* text alignment within its side */
-  flex: 1;            /* take available space */
+.rectangle-text h2 {
+  margin-bottom: 3vw;
+  margin-top: 4.5vw;
+  margin-left: 2.5vw;
+  font-size: 2.7vw;
+  font-weight: bold;
+}
+
+.rectangle-text p {
+  font-size: 1.2vw;
+  line-height: 1.5;
+  margin-bottom: 19px;
+  margin-left: 2.5vw;
 }
 
 .rectangle-content img {
-  width: 300px;        /* control image size */
-  height: 450px;       /* control image size */
-  border-radius: 8px; /* optional: rounded image corners */
+  width: 750px;        /* control image size */
+  height: 750px;       /* control image size */
   object-fit: cover;  /* keeps image nicely cropped */
   margin-left: 15px;  /* space between text and image */
+  display: block;       /* removes inline spacing */
+  margin-top: -3vw;        /* no top margin */
+  margin-right: -4vw;
+  
 }
+
+.rectangle-box {
+  margin: 3.3vw auto; /*  spacing between boxes */
+}
+
+.rectangle-box2 {
+  margin: 3.3vw auto; /*  spacing between boxes */
+}
+

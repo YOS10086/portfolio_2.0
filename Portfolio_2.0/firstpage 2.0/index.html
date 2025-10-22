@@ -23,7 +23,7 @@
   position: sticky;
   top: 0;
   padding: 0.6vw;
-  background: black;
+  background: rgb(255, 255, 255);
   text-align: center;
   z-index: 10;
 }
@@ -39,12 +39,13 @@
       header button {
         padding: 5px 10px;
         background-color: transparent;
-        color: white;
+        color: rgb(0, 0, 0);
         border: none;
         font-size: 2vw;
         cursor: pointer;
         border-radius: 3px;
         margin-left: 1px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }
 
       /* Home Button */
@@ -55,10 +56,11 @@
         transform: translateY(-50%);
         font-size: 2.5vw;
         background-color: transparent;
-        color: white;
+        color: rgb(0, 0, 0);
         border: none;
         cursor: pointer;
         padding: 5px 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
       }
 
 
@@ -121,7 +123,7 @@
 
 
 
-   
+
 
       .flex-container {
         display: flex;
@@ -135,7 +137,7 @@
         top: 30%;
         left: 72.5%;
         transform: translate(-50%, -50%);
-        font-size: 5vw;
+        font-size: 3vw;
         width: 30%;
          text-align: left;
       }
@@ -143,11 +145,11 @@
       
         .upperbodytext {
         position: absolute;
-        top: 60%;
-        left: 78%;
+        top: 58%;
+        left: 72.5%;
         transform: translate(-50%, -50%);
         font-size: 2vw;
-         width: 40%;
+         width: 30%;
             text-align: left;
       }
 
@@ -167,8 +169,8 @@
   <body>
     <main>
       <header>
-        <button class="home-button" onclick="window.location.href='../firstpage/index.html';">Home</button>
-        <p style="color:white; font-size: 3.5vw;"> Anjiang Zhang </p>
+        <button class="home-button" onclick="window.location.href='../firstpage/index.html';">AJ</button>
+        <p style="color:rgb(0, 0, 0); font-size: 3.5vw;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> AJZ </p>
         <div class="header-buttons">
           <button onclick="window.location.href='../aboutpage/index.html';">About</button>
           <button onclick="window.location.href='../contactpage/index.html';">Contact</button>
@@ -183,8 +185,8 @@
         
         
         <div class="upperbodytext">
-          <p style="font-family:verdana">Lorem ipsum dolor sit amet,</p>
-           <p style="font-family:verdana">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
+          <p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seri">Lorem ipsum dolor sit amet,</p>
+           <p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip </p>
         </div>
         
         
@@ -195,7 +197,7 @@
 
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
-      <img src="image1.jpg" alt="Image 1" />
+      <a href="../aboutpage/index.html"><img src="image1.jpg" alt="Image 1" /></a>
       <img src="image2.jpg" alt="Image 2" />
       <img src="image3.jpg" alt="Image 3" />
     </div>
@@ -204,15 +206,61 @@
   <button class="carousel-button next">&#10095;</button>
 </div>
 
- <!-- rectangle box -->
-
+ <!-- rectangle 1 -->
 <div class="rectangle-box">
-    <div class="rectangle-content">
-    <p>Your text goes here</p>
+  <div class="rectangle-content">
+    
+    <!-- Text container -->
+    <div class="rectangle-text">
+      <h2>My Rectangle Header</h2>
+      <p>
+        This is some body text inside the rectangle. You can add multiple paragraphs, 
+        and style them differently from the header.
+      </p>
+      <p>
+        Here's another line of text. It will wrap and align nicely.
+      </p>
+    </div>
+
+    <!-- Side image -->
+    <img src="image2.jpg" alt="Side image" />
+  </div>
+</div>
+
+<!-- Rectangle 2 -->
+<div class="rectangle-box2">
+  <div class="rectangle-content">
+    <div class="rectangle-text">
+      <h2>Second Rectangle Header</h2>
+      <p>This is another rectangle with its own content.</p>
+      <p>It uses the same CSS styles as the first one.</p>
+    </div>
     <img src="image1.jpg" alt="Side image" />
   </div>
 </div>
 
+<!-- Rectangle 3 -->
+<div class="rectangle-box3">
+  <div class="rectangle-content">
+    <div class="rectangle-text">
+      <h2>Second Rectangle Header</h2>
+      <p>This is another rectangle with its own content.</p>
+      <p>It uses the same CSS styles as the first one.</p>
+    </div>
+    <img src="image3.jpg" alt="Side image" />
+  </div>
+</div>
+
+<!-- black footer below-->
+      
+<div class="black-footer">
+    <p class="footer-text">
+    © 2025 Your Name | 
+    <a href="#" style="color:white; text-decoration: underline;">Privacy Policy</a>
+  </p>
+       <a style="color:white;"><p class="footer-text">123 Main Street, City, Country</p>
+    <p class="footer-text">Email: example@email.com | Phone: +1 (123) 456-7890</p> </a>
+</div> <!-- black footer -->
 
 
 <script>
