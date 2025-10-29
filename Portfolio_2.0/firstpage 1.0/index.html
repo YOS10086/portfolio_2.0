@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+  position: sticky;
+  top: 0;
+  padding: 0.6vw;
+  background: black;
+  text-align: center;
+  z-index: 10;
+}
+
+      header .header-buttons {
+        position: absolute;
+        right: 10px; 
+        top: 50%; 
+        transform: translateY(-50%);
+      }
+
+  
+      header button {
+        padding: 5px 10px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 2vw;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-left: 1px;
+      }
+
+      /* Home Button */
+      header .home-button {
+        position: absolute;
+        left: 0vw; 
+        top: 50%; 
+        transform: translateY(-50%);
+        font-size: 2.5vw;
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px 20px;
+      }
+
+      .content > div {
+        height: 50px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px;
+        padding: 23px 12vw;
+      }
+
+      .imgbox {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+      }
+
+      .imgboxnobutton {
+        position: relative;
+        text-align: center;
+      }
+
+      .center-fit {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: filter 0.5s ease;
+      }
+
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        color: white;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      
+
+      .left-fit {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        font-size: 3vw;
+        margin-top: 20px;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: black;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+      }
+
+      .imgbox:hover .center-fit {
+        filter: brightness(50%);
+      }
+
+      .imgbox:hover .centered {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .imgbox:hover .button {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .titleoffright {
+        position: absolute;
+        top: 30%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-size: 10.5vw;
+      }
+
+      .headingleft {
+        position: absolute;
+        top: 90%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-size: 6vw;
+      }
+
+          .titlesmall {
+        position: absolute;
+        top: 60%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-size: 3.5vw;
+      }
+    </style>
+  </head>
+
+
+
+  <body>
+    <main>
+      <header>
+        <button class="home-button" onclick="window.location.href='../firstpage/index.html';">Home</button>
+        <p style="color:white; font-size: 3.5vw;"> This is my header </p>
+        <div class="header-buttons">
+          <button onclick="window.location.href='../aboutpage/index.html';">About</button>
+          <button onclick="window.location.href='../contactpage/index.html';">Contact</button>
+        </div>
+      </header>
+
+      <div class="imgboxnobutton">
+        <img class="center-fit" src="titlepic.jpg">
+        <div class="titleoffright">
+          <p style="font-family:verdana">Heading Test</p>
+        </div>
+         <div class="titlesmall">
+          <p style="font-family:verdana">Heading Small Test</p>
+        </div>
+      </div> <!-- top image + title -->
+
+      <div class="flex-container">
+        <div class="left-fit">
+          <p style="font-family:verdana">Featured Works</p>
+        </div>
+      </div> <!-- middle project heading -->
+
+      <div class="grid-container">
+        <button class="imgbox" onclick="window.location.href='../projectpage1/index.html';">
+  <img class="center-fit" src="background1.jpg" alt="Image 1">
+  <div class="centered">
+    <p style="font-family:verdana; margin: 0;">Brain Coral Interface</p>
+    <p style="font-family:verdana; font-size: 1.3vw; margin: 2;">Wearable Piece</p>
+  </div>
+</button>
+
+        <button class="imgbox" onclick="window.location.href='../projectpage2/index.html';">
+          <img class="center-fit" src="background2.jpg" alt="Image 2">
+          <div class="centered">
+            <p style="font-family:verdana">Browser History Visualizer</p>
+            <p style="font-family:verdana; font-size: 1.3vw; margin: 2;">Software Tool</p>
+          </div>
+        </button>
+
+        <button class="imgbox" onclick="window.location.href='../projectpage3/index.html';">
+          <img class="center-fit" src="background4.jpg" alt="Image 3">
+          <div class="centered">
+            <p style="font-family:verdana">Falcon in the Storm</p>
+            <p style="font-family:verdana; font-size: 1.3vw; margin: 2;">Installation</p>
+          </div>
+        </button>
+
+        <button class="imgbox" onclick="window.location.href='../projectpage4/index.html';">
+          <img class="center-fit" src="background3.jpg" alt="Image 4">
+          <div class="centered">
+            <p style="font-family:verdana">Sunset</p>
+            <p style="font-family:verdana; font-size: 1.3vw; margin: 2;">Installation</p>
+          </div>
+        </button>
+
+        <button class="imgbox" onclick="window.location.href='../projectpage5/index.html';">
+          <img class="center-fit" src="background5.jpg" alt="Image 5">
+          <div class="centered">
+            <p style="font-family:verdana">Sunset</p>
+            <p style="font-family:verdana; font-size: 1.3vw; margin: 2;">Installation</p>
+          </div>
+        </button>
+      </div>
+
+
+
+<div class="black-footer">
+    <p class="footer-text">
+    © 2025 Your Name | 
+    <a href="#" style="color:white; text-decoration: underline;">Privacy Policy</a>
+  </p>
+       <a style="color:white;"><p class="footer-text">123 Main Street, City, Country</p>
+    <p class="footer-text">Email: example@email.com | Phone: +1 (123) 456-7890</p> </a>
+</div> <!-- black footer -->
+
+
+
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
